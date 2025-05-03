@@ -1,0 +1,30 @@
+services:
+  web:
+    build: .
+    container_name: rb-notifications-api
+    command: ./bin/rails server -b 0.0.0.0 && bundle exec sidekiq
+    volumes:
+      - .:/rails
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+    env_file:
+      - .env
+  
+  sidekiq:
+    build: .
+    container_name: sidekiq
+    command: bundle exec sidekiq
+    volumes:
+      - .:/rails
+    depends_on:
+      - redis
+    env_file:
+      - .env
+
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"
