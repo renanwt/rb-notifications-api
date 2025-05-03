@@ -9,6 +9,8 @@
 
 # Ignore node_modules (used by Rails for asset management like Webpacker/jsbundling).
 /node_modules
+.yarn-cache
+.yarnclean
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
@@ -20,6 +22,7 @@ yarn-debug.log*
 
 # Ignore master key for decrypting credentials and more (common in Rails/modern Ruby).
 /config/master.key
+/config/credentials.yml.enc
 /config/credentials/*.key
 
 # --- Logs & Temporary Files ---
@@ -47,7 +50,7 @@ yarn-debug.log*
 
 # Ignore public assets (if serving compiled assets) and uploads (if applicable).
 /public/assets
-# /public/uploads
+/public/uploads
 
 # --- Database ---
 # Ignore database files (e.g., SQLite).
@@ -57,6 +60,7 @@ yarn-debug.log*
 # --- Test & Coverage ---
 # Ignore coverage reports and temporary test files.
 /coverage/
+.byebug_history
 /spec/tmp
 
 # --- OS-specific ---
@@ -67,5 +71,6 @@ Thumbs.db
 # --- Editor-specific ---
 # Ignore editor-specific files (consider adding to global gitignore).
 .vscode/
+*.sw[a-p]
 *.swp
 *~
