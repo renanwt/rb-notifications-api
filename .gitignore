@@ -1,0 +1,71 @@
+# See https://help.github.com/articles/ignoring-files for more about ignoring files.
+# Use a global ignore file for OS or editor-specific files.
+# git config --global core.excludesfile '~/.gitignore_global'
+
+# --- Dependencies ---
+# Ignore bundler config and vendor directory.
+/.bundle
+/vendor/bundle
+
+# Ignore node_modules (used by Rails for asset management like Webpacker/jsbundling).
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# --- Environment & Credentials ---
+# Ignore environment files (except templates).
+/.env*
+!/.env*.erb
+
+# Ignore master key for decrypting credentials and more (common in Rails/modern Ruby).
+/config/master.key
+/config/credentials/*.key
+
+# --- Logs & Temporary Files ---
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Ignore caches
+/tmp/cache/
+
+# --- Storage & Uploads ---
+# Ignore storage (e.g., Active Storage) and temporary storage.
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
+
+# Ignore public assets (if serving compiled assets) and uploads (if applicable).
+/public/assets
+# /public/uploads
+
+# --- Database ---
+# Ignore database files (e.g., SQLite).
+*.sqlite3
+*.sqlite3-journal
+
+# --- Test & Coverage ---
+# Ignore coverage reports and temporary test files.
+/coverage/
+/spec/tmp
+
+# --- OS-specific ---
+# Ignore OS-specific files (consider adding to global gitignore).
+.DS_Store
+Thumbs.db
+
+# --- Editor-specific ---
+# Ignore editor-specific files (consider adding to global gitignore).
+.vscode/
+*.swp
+*~
