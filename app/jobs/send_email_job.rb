@@ -10,7 +10,7 @@ class SendEmailJob
 
     from = SendGrid::Email.new(email: ENV['SENDGRID_SINGLE_SENDER_EMAIL'])
     to = SendGrid::Email.new(email: email)
-    subject = 'Este é um e-mail de teste da Pluga'
+    subject = 'Pluga Teste - Desafio Renan'
     content = SendGrid::Content.new(type: 'text/plain', value: message)
     mail = SendGrid::Mail.new(from, subject, to, content)
 
