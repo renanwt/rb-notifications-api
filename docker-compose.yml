@@ -2,7 +2,7 @@ services:
   web:
     build: .
     container_name: rb-notifications-api
-    command: ./bin/rails server -b 0.0.0.0 && bundle exec sidekiq
+    command: ./bin/rails server -b 0.0.0.0
     volumes:
       - .:/rails
     ports:
