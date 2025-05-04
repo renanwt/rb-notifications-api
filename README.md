@@ -94,3 +94,22 @@ This project uses RSpec for testing. To run the test suite, use:
 ```bash
 bundle exec rspec
 ```
+
+## Troubleshooting (if needed)🔧
+
+In case of getting this message below when running the container:
+```
+: invalid option      | /bin/bash: -                                                                                                                                                           
+: invalid option-api  | /bin/bash: -
+sidekiq exited with code 1
+rb-notifications-api exited with code 1
+```
+
+Try running the following commands in WSL:
+```
+sudo apt install dos2unix
+find . -type f -name "*.rb" -exec dos2unix {} +
+find . -type f -name "*.rake" -exec dos2unix {} +
+dos2unix ./bin/*
+```
+This should make you able to run the API.
