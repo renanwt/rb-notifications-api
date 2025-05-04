@@ -17,8 +17,7 @@ yarn-debug.log*
 
 # --- Environment & Credentials ---
 # Ignore environment files (except templates).
-/.env*
-!/.env*.erb
+/.env
 
 # Ignore master key for decrypting credentials and more (common in Rails/modern Ruby).
 /config/master.key
