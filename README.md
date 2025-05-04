@@ -80,6 +80,7 @@ curl -X POST http://localhost:3000/send_message \
 ```
 
 You should receive a `{"status":"Emails are being processed"}` response, and the emails will be sent in the background via Sidekiq.
+Ps.: After sending e-mails for test purposes, consider checking the **SPAM** box.
 
 ## Sidekiq Web UI Monitoring ✨
 
