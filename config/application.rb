@@ -30,6 +30,9 @@ module HelloApi
     config.autoload_lib(ignore: %w(assets tasks))
     config.active_job.queue_adapter = :sidekiq
 
+    # Enable session middleware for Sidekiq::Web
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore, key: '_rb_notifications_api_session'
 
     # Configuration for the application, engines, and railties goes here.
     #
