@@ -85,3 +85,11 @@ You should receive a `{"status":"Emails are being processed"}` response, and the
 
 You can monitor the background jobs via the Sidekiq Web UI, available at:
 `http://localhost:3000/sidekiq`
+
+## Running Tests 🧪
+
+This project uses RSpec for testing. To run the test suite, use:
+
+```bash
+bundle exec rspec
+```
